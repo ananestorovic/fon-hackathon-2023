@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "558660185420",
+    "project_id": "fon2023-39de9",
+    "storage_bucket": "fon2023-39de9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:558660185420:android:89a8295d49d75c4a47f3e9",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "558660185420-f04vo8f9f47p9fi3in553d00r2vnsti1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsgc7hKWnbuQyRIgS001E1PpjEUyC0CJU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "558660185420-f04vo8f9f47p9fi3in553d00r2vnsti1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
