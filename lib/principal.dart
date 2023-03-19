@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/auth/authenticate.dart';
 import 'package:flutter_application_1/auth/login.dart';
+import 'package:flutter_application_1/auth/wrapper.dart';
 import 'package:flutter_application_1/pet.dart';
 import 'package:flutter_application_1/pet_category.dart';
 import 'package:flutter_application_1/pet_widget.dart';
+import 'package:flutter_application_1/services/auth.dart';
+import 'package:provider/provider.dart';
+
+import 'model/userModel.dart';
 
 class Principal extends StatefulWidget {
   @override
@@ -32,9 +37,13 @@ class _PrincipalState extends State<Principal> {
                 color: Colors.grey[800],
                 onPressed: () {
                   Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => Authenticate()),
-                  );
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => StreamProvider<UserModel?>.value(
+                            value: AuthService().user,
+                            initialData: null,
+                            child: Wrapper()),
+                      ));
                 },
                 icon: Icon(Icons.account_circle_outlined,
                     color: Colors.grey[800])),

@@ -1,29 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pet.dart';
 import 'package:flutter_application_1/pet_details.dart';
+import 'package:flutter_application_1/services/auth.dart';
 
 class UserProfile extends StatelessWidget {
   final String uid;
-
+  final AuthService _auth = AuthService();
   UserProfile({required this.uid});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(20),
-          topRight: Radius.circular(20),
+    return Scaffold(
+      backgroundColor: Colors.white,
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        brightness: Brightness.light,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: Icon(
+            Icons.arrow_back,
+            color: Colors.grey[800],
+          ),
         ),
-        border: Border.all(
-          color: Color.fromARGB(255, 206, 203, 203),
-          width: 1,
-        ),
+        actions: [
+          Padding(
+            padding: EdgeInsets.only(right: 16),
+            child: Icon(
+              Icons.more_horiz,
+              color: Colors.grey[800],
+            ),
+          ),
+        ],
       ),
-      margin: EdgeInsets.only(right: 16, left: 16, bottom: 16),
-      width: 220,
-      child: Column(
+      body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
           Expanded(
@@ -44,25 +57,6 @@ class UserProfile extends StatelessWidget {
                     ),
                   ),
                 ),
-                Align(
-                  alignment: Alignment.topRight,
-                  child: Padding(
-                    padding: EdgeInsets.all(12),
-                    child: Container(
-                      height: 30,
-                      width: 30,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: Colors.white,
-                      ),
-                      child: Icon(
-                        Icons.favorite,
-                        size: 16,
-                        color: Colors.grey[300],
-                      ),
-                    ),
-                  ),
-                ),
               ],
             ),
           ),
@@ -74,16 +68,24 @@ class UserProfile extends StatelessWidget {
                 SizedBox(
                   height: 8,
                 ),
-                Text(
-                  "Ime korisnika",
-                  style: TextStyle(
-                    color: Colors.grey[800],
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(
-                  height: 8,
+                Row(
+                  children: [
+                    Text(
+                      "Nikola Krstic",
+                      style: TextStyle(
+                        color: Colors.grey[800],
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 4,
+                    ),
+                    Icon(
+                      Icons.verified,
+                      color: Colors.green,
+                    ),
+                  ],
                 ),
                 Row(
                   children: [
@@ -115,6 +117,171 @@ class UserProfile extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(
+                  height: 8,
+                ),
+                Text(
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum tempor lorem, sed facilisis lectus sollicitudin a. Vivamus a quam.",
+                  style: TextStyle(
+                    color: Colors.grey[600],
+                    fontSize: 14,
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Center(
+                  child: Container(
+                      width: 150,
+                      padding:
+                          EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(20),
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.blue[300]!.withOpacity(0.5),
+                            spreadRadius: 0,
+                            blurRadius: 0,
+                            offset: Offset(0, 0),
+                          ),
+                        ],
+                        color: Colors.blue[300],
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Dodaj oglas",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      )),
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                Center(
+                  child: Container(
+                      width: 150,
+                      padding:
+                          EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(20),
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.blue[300]!.withOpacity(0.5),
+                            spreadRadius: 0,
+                            blurRadius: 0,
+                            offset: Offset(0, 0),
+                          ),
+                        ],
+                        color: Colors.blue[300],
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Omiljeni oglasi",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      )),
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                Center(
+                  child: Container(
+                      width: 150,
+                      padding:
+                          EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(20),
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.blue[300]!.withOpacity(0.5),
+                            spreadRadius: 0,
+                            blurRadius: 0,
+                            offset: Offset(0, 0),
+                          ),
+                        ],
+                        color: Colors.blue[300],
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Moji oglasi",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      )),
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                Center(
+                  child: Container(
+                      width: 150,
+                      padding:
+                          EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(20),
+                        ),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.blue[300]!.withOpacity(0.5),
+                            spreadRadius: 0,
+                            blurRadius: 0,
+                            offset: Offset(0, 0),
+                          ),
+                        ],
+                        color: Colors.blue[300],
+                      ),
+                      child: Center(
+                        child: Text(
+                          "Istorija",
+                          style: TextStyle(
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                          ),
+                        ),
+                      )),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Center(
+                    child: ElevatedButton(
+                  style: ButtonStyle(
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    )),
+                  ),
+                  onPressed: () async {
+                    await _auth.signOut();
+                  },
+                  child: Text(
+                    "Odjavi se",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                ))
               ],
             ),
           ),

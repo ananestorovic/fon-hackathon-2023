@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 //import 'package:qr_scanner/pages/home/homepage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_application_1/auth/register.dart';
 import 'package:flutter_application_1/services/auth.dart';
 
 class Login extends StatefulWidget {
@@ -91,6 +92,13 @@ class _LoginState extends State<Login> {
                 ),
               ),
             ),
+            SizedBox(height: 8.0),
+            TextButton(
+                onPressed: () => {
+                      Navigator.pushReplacement(context,
+                          MaterialPageRoute(builder: (context) => Register()))
+                    },
+                child: Text("Registruj se")),
             SizedBox(height: 12.0),
             Text(
               error,

@@ -26,7 +26,10 @@ class _RegisterState extends State<Register> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Register Page"),
+        brightness: Brightness.light,
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        title: Text("Login Page"),
       ),
       body: Center(
         child: SingleChildScrollView(
