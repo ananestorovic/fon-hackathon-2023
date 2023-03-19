@@ -129,8 +129,8 @@ class _RegisterState extends State<Register> {
                     },
                     decoration: InputDecoration(
                         border: OutlineInputBorder(),
-                        labelText: 'Email roditelja',
-                        hintText: 'Unesite e-mail roditelja'),
+                        labelText: 'Adresa',
+                        hintText: 'Unesite adresu'),
                   ),
                 ),
                 SizedBox(

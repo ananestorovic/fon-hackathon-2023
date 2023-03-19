@@ -15,7 +15,7 @@ class DatabaseService {
     return await userCollection.doc(uid).set({
       "firstName": firstName,
       "lastName": lastName,
-      "parentEmail": parentEmail,
+      "adresa": parentEmail,
     });
   }
 }

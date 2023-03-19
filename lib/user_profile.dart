@@ -132,7 +132,7 @@ class UserProfile extends StatelessWidget {
                 ),
                 Center(
                   child: Container(
-                      width: 150,
+                      width: 170,
                       padding:
                           EdgeInsets.symmetric(vertical: 12, horizontal: 20),
                       decoration: BoxDecoration(
@@ -165,7 +165,7 @@ class UserProfile extends StatelessWidget {
                 ),
                 Center(
                   child: Container(
-                      width: 150,
+                      width: 170,
                       padding:
                           EdgeInsets.symmetric(vertical: 12, horizontal: 20),
                       decoration: BoxDecoration(
@@ -198,7 +198,7 @@ class UserProfile extends StatelessWidget {
                 ),
                 Center(
                   child: Container(
-                      width: 150,
+                      width: 170,
                       padding:
                           EdgeInsets.symmetric(vertical: 12, horizontal: 20),
                       decoration: BoxDecoration(
@@ -231,7 +231,7 @@ class UserProfile extends StatelessWidget {
                 ),
                 Center(
                   child: Container(
-                      width: 150,
+                      width: 170,
                       padding:
                           EdgeInsets.symmetric(vertical: 12, horizontal: 20),
                       decoration: BoxDecoration(
