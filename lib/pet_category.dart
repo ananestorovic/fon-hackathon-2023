@@ -70,7 +70,7 @@ class CategoryList extends StatelessWidget {
                 childAspectRatio: 1 / 1.55,
                 crossAxisCount: 2,
                 crossAxisSpacing: 15,
-                children: getPetList()
+                children: Pet.pets
                     .where((i) => i.category == category)
                     .map((item) {
                   return PetWidget(

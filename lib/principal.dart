@@ -16,7 +16,7 @@ class Principal extends StatefulWidget {
 }
 
 class _PrincipalState extends State<Principal> {
-  List<Pet> pets = getPetList();
+  List<Pet> pets = Pet.pets;
 
   @override
   Widget build(BuildContext context) {
