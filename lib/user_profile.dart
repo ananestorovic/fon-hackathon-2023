@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/create_request.dart';
 import 'package:flutter_application_1/pet.dart';
 import 'package:flutter_application_1/pet_details.dart';
 import 'package:flutter_application_1/services/auth.dart';
@@ -133,8 +134,7 @@ class UserProfile extends StatelessWidget {
                 Center(
                   child: Container(
                       width: 170,
-                      padding:
-                          EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                      padding: EdgeInsets.symmetric(vertical: 0, horizontal: 0),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(
                           Radius.circular(20),
@@ -150,13 +150,19 @@ class UserProfile extends StatelessWidget {
                         color: Colors.blue[300],
                       ),
                       child: Center(
-                        child: Text(
-                          "Dodaj oglas",
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.white,
-                          ),
+                        child: TextButton(
+                          child: Text("Dodaj oglas",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16.0,
+                                fontWeight: FontWeight.bold,
+                              )),
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => CreateRequestPage()));
+                          },
                         ),
                       )),
                 ),

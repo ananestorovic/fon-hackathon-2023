@@ -23,11 +23,19 @@ class _PrincipalState extends State<Principal> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        title: Center(
+          child: const Text('PawShare',
+              style: TextStyle(
+                color: Colors.green,
+                fontSize: 28.0,
+                fontWeight: FontWeight.bold,
+              )),
+        ),
         brightness: Brightness.light,
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: Icon(
-          Icons.sort,
+          Icons.inbox_outlined,
           color: Colors.grey[800],
         ),
         actions: [
@@ -57,34 +65,35 @@ class _PrincipalState extends State<Principal> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 4),
+                padding: EdgeInsets.symmetric(horizontal: 2),
                 child: Text(
                   "Pet",
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.grey,
                     fontWeight: FontWeight.bold,
-                    fontSize: 18,
+                    fontSize: 16,
                   ),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 4, vertical: 0),
+                padding: EdgeInsets.symmetric(horizontal: 2, vertical: 0),
                 child: Text(
                   "Care",
                   style: TextStyle(
-                    color: Colors.black,
+                    color: Colors.grey,
                     fontWeight: FontWeight.bold,
-                    fontSize: 18,
+                    fontSize: 16,
                   ),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 4, vertical: 4),
+                padding: EdgeInsets.symmetric(horizontal: 2, vertical: 0),
                 child: Text(
                   "Share",
                   style: TextStyle(
-                    color: Colors.grey[800],
-                    fontSize: 18,
+                    color: Colors.black,
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),
