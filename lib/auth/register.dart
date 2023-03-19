@@ -13,7 +13,7 @@ class Register extends StatefulWidget {
 class _RegisterState extends State<Register> {
   final AuthService _auth = AuthService();
   final _formKey = GlobalKey<FormState>();
-
+  var isChecked = false;
   String firstname = '';
   String lastname = '';
   String email = '';
@@ -134,7 +134,22 @@ class _RegisterState extends State<Register> {
                   ),
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 8,
+                ),
+                CheckboxListTile(
+                  //checkbox positioned at left
+                  value: isChecked,
+                  controlAffinity: ListTileControlAffinity.leading,
+                  onChanged: (bool? value) {
+                    setState(() {
+                      isChecked = value!;
+                    });
+                  },
+                  title: Text(
+                      "Prihvatam uslove koriscenja i prikupljanja podataka"),
+                ),
+                SizedBox(
+                  height: 25,
                 ),
                 Container(
                   height: 50,

@@ -176,7 +176,7 @@ class _PrincipalState extends State<Principal> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
-                  "Newest Pet",
+                  "Recently added",
                   style: TextStyle(
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
